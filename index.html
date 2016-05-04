@@ -22,9 +22,7 @@
 		</form>
 		<fieldset>
 			<legend>Résultats</legend>
-
-			qsqdssq
-			<div ng-repeat="user in myJson | filter:{$:searchAll,'name':searchName,'age':searchAge}">
+			<div ng-repeat="user in myJson | filter:{$:searchAll,'name':searchName,'age':searchAge">
 				<h2><span ng-bind="user.name"></span></h2>	 
 				<ul>
 					<li>Age:  <span ng-bind="user.age"></span> </li>

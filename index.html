@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Parse du JSON</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="assets/styles/main.css">
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+<body ng-app="parsejsonApp">
+	<div ng-controller="HomeController">
+		<h1>{{titre}}</h1>
+		<form>
+			<fieldset>
+				<legend>Filtre</legend>
+				<label for="searchAll">Global</label>
+				<input type="text" ng-model="searchAll" class="form-group-lg">
+				<label for="searchName">Nom</label>
+				<input type="text" ng-model="searchName" class="form-group-lg">
+				<label for="searchAge">Age</label>
+				<input type="text" ng-model="searchAge" class="form-group-lg">
+			</fieldset>
+		</form>
+		<fieldset>
+			<legend>Résultats</legend>
+			<div ng-repeat="user in myJson | filter:{$:searchAll,'name':searchName,'age':searchAge}">
+				<h2><span ng-bind="user.name"></span></h2>	 
+				<ul>
+					<li>Age:  <span ng-bind="user.age"></span> </li>
+					<li>Téléphone: <span ng-bind="user.phone"></span></li>
+					<li> Adresse: <span ng-bind="user.adress"></span></li>
+					<li> Techno:
+						<ul>
+							<div ng-repeat="(tech,level) in user.techs">
+								<li><span ng-bind="tech"></span> with level <span ng-bind="level"></span> </li>
+							</div>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</fieldset>
+	</div>
+
+<footer>
+	
+	<script type="text/javascript" src="node_modules/angular/angular.min.js" ></script>
+	<script type="text/javascript" src="assets/scripts/core/app.js" charset="utf-8"></script>
+	<script type="text/javascript" src="assets/scripts/controllers/home-controller.js" charset="utf-8"></script>
+
+</footer>
+</body>
+</html>

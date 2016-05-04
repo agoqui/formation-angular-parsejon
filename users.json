@@ -1,0 +1,52 @@
+[
+	{
+		"name" : "Dupont",
+		"phone": "0383212526",
+		"age" : 22,
+		"adress" : "102 rue de labas, terreaterre",
+		"techs" : {
+			"php" : 9,
+			"nodeJS" : 8,
+			"js" : 3
+		}
+
+	},
+	{
+		"name" : "Durant",
+		"phone": "0203050409",
+		"age" : 58,
+		"adress" : "10 rue d'ici, terreaterre",
+		"techs" : {
+			"php" : 3,
+			"nodeJS" : 8,
+			"Symphony" : 6
+		}
+
+	},
+	{
+		"name" : "Sanders",
+		"phone": "0402365998",
+		"age" : 18,
+		"adress" : "1088 wallstreet, NY",
+		"techs" : {
+			"php" : 3,
+			"nodeJS" : 8,
+			"CSS3" : 6,
+			"HTML5" :9,
+			"bootstrap" : "startest"
+		}
+
+	},
+	{
+		"name" : "Aldebert Joe",
+		"phone": "0123256987",
+		"age" : 38,
+		"adress" : "54 grande rue, Nancy",
+		"techs" : {
+			"php" : 3,
+			"nodeJS" : 8,
+			"bootstrap" : "expert"
+		}
+
+	}
+]
